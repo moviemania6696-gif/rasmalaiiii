@@ -343,10 +343,7 @@
       unlockBtn.addEventListener('click', checkPassword);
 
       function checkPassword() 
-        // Wait 1 second, then simulate click to "wake up" Spotify
-setTimeout(() => {
-  document.getElementById('shuffle-btn').blur(); // optional
-}, 1000);
+       
       {
         const pass = document.getElementById('password-input').value;
         if (pass === "iloveyoumeribubu") { // ← CHANGE THIS TO YOUR OWN PASSWORD
