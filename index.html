@@ -374,25 +374,59 @@
       // ========================
       // BOLLYWOOD SONGS
       // ========================
-      const songs = [
-        {
-          title: "Tum Hi Ho — Aashiqui 2",
-          url: "https://youtu.be/Umqb9KENgmk?si=ZsVx6FU0vvtgBd3c",
-          note: "You’re my beginning, my middle, and my forever."
-        },
-      
-      ];
-
-      function renderSong(index) {
-        const container = document.getElementById('song-container');
-        const song = songs[index];
-        container.innerHTML = `
-          <h3>${song.title}</h3>
-          <p class="song-note">“${song.note}”</p>
-          <iframe src="${song.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `;
-      }
-
+     const songs = [
+  {
+    title: "Tum Hi Ho — Aashiqui 2",
+    url: "https://open.spotify.com/embed/track/5e78xQLn3Y39QZJEFg3LgV?utm_source=generator",
+    note: "You’re my beginning, my middle, and my forever."
+  },
+  {
+    title: "Pehla Nasha — Jo Jeeta Wohi Sikandar",
+    url: "https://open.spotify.com/embed/track/0zqoKXZv8LU3g7GQnF1F9v?utm_source=generator",
+    note: "That first rush of falling for you? Still hasn’t worn off."
+  },
+  {
+    title: "Tere Bina — Guru",
+    url: "https://open.spotify.com/embed/track/7qXrXJmQbVnYh1J15zJwYH?utm_source=generator",
+    note: "My world dims when you’re not near."
+  },
+  {
+    title: "Aaj Din Chadheya — Love Aaj Kal",
+    url: "https://open.spotify.com/embed/track/2VtjyJxgYK9O9gWv5lq9Z3?utm_source=generator",
+    note: "You walked in… and my whole life lit up."
+  },
+  {
+    title: "Raabta — Agent Vinod",
+    url: "https://open.spotify.com/embed/track/63JkYQVdQp5tFj9QZ3kDjG?utm_source=generator",
+    note: "Feels like our souls knew each other long before we met."
+  },
+  {
+    title: "Iktara — Wake Up Sid",
+    url: "https://open.spotify.com/embed/track/4cOdTShPUQO0YnvxISVnzY?utm_source=generator",
+    note: "Your voice? My favorite melody."
+  },
+  {
+    title: "Soch Na Sake — Airlift",
+    url: "https://open.spotify.com/embed/track/5K9p8jWkYQZg8jQZJEFg3L?utm_source=generator",
+    note: "Even when I try… I can’t imagine life without you."
+  }
+];
+    function renderSong(index) {
+  const container = document.getElementById('song-container');
+  const song = songs[index];
+  container.innerHTML = `
+    <h3>${song.title}</h3>
+    <p class="song-note">“${song.note}”</p>
+    <iframe 
+      src="${song.url}" 
+      width="100%" 
+      height="152" 
+      frameborder="0" 
+      allowtransparency="true" 
+      allow="encrypted-media">
+    </iframe>
+  `;
+}
       document.getElementById('shuffle-btn').addEventListener('click', () => {
         const randomIndex = Math.floor(Math.random() * songs.length);
         renderSong(randomIndex);
